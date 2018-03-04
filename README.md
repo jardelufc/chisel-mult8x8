@@ -10,7 +10,5 @@ Getting the Repo
     $ cd chisel-mult8x8
     $ git fetch origin
     $ git checkout release
-
-
     $ ./run-mult8x8 mult8x8
 
