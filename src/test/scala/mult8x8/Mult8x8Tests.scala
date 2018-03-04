@@ -13,8 +13,16 @@ class Mult8x8Tests(c: Mult8x8) extends PeekPokeTester(c) {
     poke(c.io.start,1)
     step(1)
     poke(c.io.start,0)
-    step(4)
+    step(1)
     expect(c.io.result, x * y)
+    step(1)
+    expect(c.io.result, x * y)
+    step(1)
+    expect(c.io.result, x * y)
+    step(1)
     expect(c.io.done_flag, 1)
+    step(1)
+    expect(c.io.result, x * y)
+    //step(1)
   //}
 }

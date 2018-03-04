@@ -32,7 +32,7 @@ class Control extends Module {
   io.regclr := myregclr
 
   switch (state) {
-    is (sIdle ) {
+    is (sIdle) {
       mystate_out:=0.U
       when (io.start) {
         myin_sel:=0.U

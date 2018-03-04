@@ -21,7 +21,6 @@ class Mult8x8 extends Module {
   val adder0 = Module(new Adder(8))
   val shifter0 = Module(new Shifter())
 
-
   reg0.io.clr:=ctrl0.io.regclr
   reg0.io.clken := ctrl0.io.clken
   reg0.io.in_reg:=adder0.io.sum
@@ -37,11 +36,10 @@ class Mult8x8 extends Module {
   mux1.io.b := io.b(7,4) 
   mux1.io.sel:=ctrl0.io.in_sel(0)
 
-  cnt0.io.clr := !io.start
+  cnt0.io.clr := ~io.start
 
   mul0.io.dataa:= mux0.io.y
-  mul0.io.datab:= mux1.io.y
-  println (mul0.io.datab)
+  mul0.io.datab:= mux1.io.y  
 
   adder0.io.b:=reg0.io.out_reg
   adder0.io.a:= shifter0.io.result
@@ -51,6 +49,4 @@ class Mult8x8 extends Module {
   
   io.result := reg0.io.out_reg
   io.done_flag := ctrl0.io.done
-
-
 }

@@ -20,11 +20,11 @@ class Reg extends Module {
 
   val res = RegInit(0.U(16.W))
 
-    when(~io.clr)
+    when(!io.clr)
   {
     res := 0.U(16.W)
   }
-  .elsewhen((io.clr & io.clken))
+  .elsewhen( (io.clr) && !(io.clken) )
   {
     res := io.in_reg
   }
