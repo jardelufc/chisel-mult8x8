@@ -1,5 +1,7 @@
 8x8 Multiplier in Chisel
 
+Install Java
+Install SBT
 
 Getting the Repo
 ----------------
