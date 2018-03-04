@@ -1,7 +1,7 @@
 8x8 Multiplier in Chisel
 -------------------------
 
-8x8 Multiplier Core architecture is detalied in Mult8x8.doc file .
+8x8 Multiplier Core architecture is detalied in Mult8x8.doc file . The scripts in this repo are based om chisel tutorial (https://github.com/ucb-bar/chisel-tutorial).
 
 Install Java
 ------------
