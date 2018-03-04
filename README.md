@@ -1,8 +1,10 @@
 8x8 Multiplier in Chisel
+-------------------------
 
 8x8 Multiplier Core architecture is detalied in Mult8x8.doc file .
 
 Install Java
+------------
 
     $ sudo add-apt-repository ppa:webupd8team/java
     $ sudo apt-get update
@@ -10,6 +12,7 @@ Install Java
 
 
 Install SBT
+-----------
 
     $ echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
     $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
