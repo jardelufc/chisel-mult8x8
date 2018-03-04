@@ -3,6 +3,12 @@
 8x8 Multiplier Core architecture is detalied in Mult8x8.doc file .
 
 Install Java
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+
+
 Install SBT
 
 Getting the Repo and running 
