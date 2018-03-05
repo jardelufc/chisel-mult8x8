@@ -32,10 +32,10 @@ Getting the Repo and running
 Simulation with verilator (Previously downloaded, compiled and installed) and verilog generator
 -----------------------------------------------
 
-    $ ./run-mult8x8.sh Mult8x8 --backend-name verilator
+    $ ./run-mult8x8.sh Mult8x8 --backend-name verilator or $ ./run-mult8x8.sh Mult8x8 -fiwv
     $ gtkwave test_run_dir/mult8x8/Mult8x8/Mult8x8.vcd &
     
-Generating Verilog (Previously download and compile firrtl from chisel 3)
+Another way for Generating Verilog (Previously download and compile firrtl from chisel 3)
 -------------------------------------------------------------------------
     $ cd test_run_dir/mult8x8/Mult8x8
     $ <firrtl dir>/utils/bin/firrtl -i Mult8x8.fir -o Mult8x8.v -X verilog
