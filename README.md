@@ -34,5 +34,9 @@ Generating Verilog (Previously download and compile firrtl from chisel 3)
     $ cd test_run_dir/mult8x8/Mult8x8
     $ <firrtl dir>/utils/bin/firrtl -i Mult8x8.fir -o Mult8x8.v -X verilog
 
+Understanding the repo
+----------------------
 
-
+    Generated verilog: https://github.com/jardelufc/chisel-mult8x8/tree/release/test_run_dir/mult8x8/Mult8x8
+    Test benches: https://github.com/jardelufc/chisel-mult8x8/tree/release/src/test/scala/mult8x8
+    RTL in Scala: https://github.com/jardelufc/chisel-mult8x8/tree/release/src/main/scala/mult8x8
