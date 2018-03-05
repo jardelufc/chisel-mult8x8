@@ -8,6 +8,7 @@ class Mult8x8 extends Module {
     val a = Input(UInt(8.W))
     val b = Input(UInt(8.W))
     val start = Input(Bool())
+    val reset = Input(Bool())
     val result = Output(UInt(16.W))
     val done_flag = Output(Bool())
   })
@@ -26,6 +27,7 @@ class Mult8x8 extends Module {
   reg0.io.in_reg:=adder0.io.sum
   
   ctrl0.io.start := io.start
+  ctrl0.io.reset := io.reset
   ctrl0.io.count:=cnt0.io.sum  
 
   mux0.io.a := io.a(3,0)

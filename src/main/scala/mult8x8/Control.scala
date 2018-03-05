@@ -7,6 +7,7 @@ class Control extends Module {
   val io = IO(new Bundle {
     val start = Input(Bool())
     val count = Input(UInt(2.W))
+    val reset = Input(Bool())
     val state_out = Output(UInt(3.W))
     val in_sel = Output(UInt(2.W))
     val shift = Output(UInt(2.W))
@@ -30,7 +31,15 @@ class Control extends Module {
   io.done   := mydone
   io.clken  := myclken
   io.regclr := myregclr
-
+  when(io.reset){
+    state := sIdle
+    myin_sel:=0.U
+    myshift:=0.U
+    mydone:=0.U
+    myclken:=1.U
+    myregclr:=1.U
+  }
+  .otherwise {
   switch (state) {
     is (sIdle) {
       mystate_out:=0.U
@@ -118,4 +127,5 @@ class Control extends Module {
     }
  
   }
+}
 }
