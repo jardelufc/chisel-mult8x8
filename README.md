@@ -28,4 +28,11 @@ Getting the Repo and running
     $ git fetch origin
     $ git checkout release
     $ ./run-mult8x8 mult8x8
+    
+Generating Verilog (Previously download and compile firrtl from chisel 3)
+-------------------------------------------------------------------------
+    $ cd test_run_dir/mult8x8/Mult8x8
+    $ <firrtl dir>/utils/bin/firrtl -i Mult8x8.fir -o Mult8x8.v -X verilog
+
+
 
