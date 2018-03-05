@@ -18,7 +18,7 @@ class AdderTester extends ChiselFlatSpec {
   behavior of "Adder"
   backends foreach {backend =>
     it should s"correctly add randomly generated numbers in $backend" in {
-      Driver(() => new Adder(16), backend)(c => new AdderTests(c)) should be (true)
+      Driver(() => new Adder(), backend)(c => new AdderTests(c)) should be (true)
     }
   }
 }

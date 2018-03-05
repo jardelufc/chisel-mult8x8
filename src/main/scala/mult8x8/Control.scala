@@ -31,7 +31,8 @@ class Control extends Module {
   io.done   := mydone
   io.clken  := myclken
   io.regclr := myregclr
-  when(io.reset){
+  
+ /*when(io.reset){
     state := sIdle
     myin_sel:=0.U
     myshift:=0.U
@@ -39,7 +40,7 @@ class Control extends Module {
     myclken:=1.U
     myregclr:=1.U
   }
-  .otherwise {
+  .otherwise {*/
   switch (state) {
     is (sIdle) {
       mystate_out:=0.U
@@ -127,5 +128,5 @@ class Control extends Module {
     }
  
   }
-}
+//}
 }

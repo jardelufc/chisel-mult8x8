@@ -19,7 +19,7 @@ class Mult8x8 extends Module {
   val mux1 = Module(new Mux4())
   val cnt0 = Module(new Counter())
   val mul0 = Module(new Mult4x4())
-  val adder0 = Module(new Adder(8))
+  val adder0 = Module(new Adder())
   val shifter0 = Module(new Shifter())
 
   reg0.io.clr:=ctrl0.io.regclr

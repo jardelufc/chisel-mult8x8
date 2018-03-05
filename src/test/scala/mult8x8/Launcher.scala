@@ -13,7 +13,7 @@ object Launcher {
       }
     },
     "Adder" -> { (manager: TesterOptionsManager) =>
-      Driver.execute(() => new Adder(8), manager) {
+      Driver.execute(() => new Adder(), manager) {
         (c) => new AdderTests(c)
       }
     },
