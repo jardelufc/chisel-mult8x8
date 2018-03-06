@@ -57,6 +57,7 @@ unset VERILATOR_ROOT
 make
 export VERILATOR_ROOT=$PWD
 export PATH=$PATH:$VERILATOR_ROOT/bin
+```
 
 Simulation with verilator (Previously downloaded, compiled and installed) and verilog generator
 -----------------------------------------------
