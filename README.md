@@ -28,7 +28,10 @@ Getting the Repo and running
     $ git fetch origin
     $ git checkout release
     $ ./run-mult8x8 mult8x8
-    
+
+Verilator installation
+----------------------
+
 Install verilator using any of the following possible ways
 For Ubuntu 17.04
 ```bash
