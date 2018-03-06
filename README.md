@@ -29,6 +29,32 @@ Getting the Repo and running
     $ git checkout release
     $ ./run-mult8x8 mult8x8
     
+Install verilator using any of the following possible ways
+For Ubuntu 17.04
+```bash
+sudo apt install pkg-config verilator
+#optionally gtkwave to view waveform dumps
+```
+
+For Ubuntu 16.10 and lower
+```bash 
+sudo apt install pkg-config
+wget http://mirrors.kernel.org/ubuntu/pool/universe/v/verilator/verilator_3.900-1_amd64.deb
+sudo dpkg -i verilator_3.900-1_amd64.deb
+```
+
+If you don't have enough permissions to use apt on your machine
+```bash
+# make autoconf g++ flex bison should be available
+wget https://www.veripool.org/ftp/verilator-3.906.tgz
+tar -xzf verilator-3.906.tgz
+cd verilator-3.906
+unset VERILATOR_ROOT
+./configure
+make
+export VERILATOR_ROOT=$PWD
+export PATH=$PATH:$VERILATOR_ROOT/bin
+
 Simulation with verilator (Previously downloaded, compiled and installed) and verilog generator
 -----------------------------------------------
 
