@@ -27,6 +27,16 @@ object Launcher {
         (c) => new Mult8x8Tests(c)
       }
     },
+    "Mult8x8SingleCycle" -> { (manager: TesterOptionsManager) =>
+      Driver.execute(() => new Mult8x8SingleCycle(), manager) {
+        (c) => new Mult8x8SingleCycleTests(c)
+      }
+    },
+    "Mult8x83stages" -> { (manager: TesterOptionsManager) =>
+      Driver.execute(() => new Mult8x83stages(), manager) {
+        (c) => new Mult8x83stagesTests(c)
+      }
+    },
     "Reg" -> { (manager: TesterOptionsManager) =>
       Driver.execute(() => new Reg(), manager) {
         (c) => new RegTests(c)
